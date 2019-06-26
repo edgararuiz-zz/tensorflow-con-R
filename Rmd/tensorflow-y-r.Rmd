@@ -261,8 +261,7 @@ library(lime)
 
 explainer <- x_tbl_entrenar %>%
   as_tibble() %>% 
-  lime(model_keras, 
-       bin_continuous = FALSE)
+  lime(model_keras, quantile_bins = FALSE)
   
 explanation <-  x_tbl_entrenar %>%
   as.data.frame() %>%
